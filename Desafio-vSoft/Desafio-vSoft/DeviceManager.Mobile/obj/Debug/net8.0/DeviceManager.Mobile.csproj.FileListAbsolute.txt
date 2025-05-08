@@ -1,0 +1,5 @@
+C:\Users\andre\Desafio-vSoft\DeviceManager.Mobile\obj\Debug\net8.0\DeviceManager.Mobile.csproj.AssemblyReference.cache
+C:\Users\andre\Desafio-vSoft\DeviceManager.Mobile\obj\Debug\net8.0\DeviceManager.Mobile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\Desafio-vSoft\DeviceManager.Mobile\obj\Debug\net8.0\DeviceManager.Mobile.AssemblyInfoInputs.cache
+C:\Users\andre\Desafio-vSoft\DeviceManager.Mobile\obj\Debug\net8.0\DeviceManager.Mobile.AssemblyInfo.cs
+C:\Users\andre\Desafio-vSoft\DeviceManager.Mobile\obj\Debug\net8.0\DeviceManager.Mobile.csproj.CoreCompileInputs.cache

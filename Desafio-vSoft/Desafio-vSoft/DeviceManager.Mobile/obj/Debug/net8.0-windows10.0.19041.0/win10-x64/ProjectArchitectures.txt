@@ -1,0 +1,1 @@
+C:\Users\andre\Downloads\Desafio-vSoft\Desafio-vSoft\DeviceManager.Mobile\DeviceManager.Mobile.csproj;x64

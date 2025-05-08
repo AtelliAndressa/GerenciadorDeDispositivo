@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC4A46BC-2D52-4A33-B567-5859345E8950}|DeviceManager.Mobile\\DeviceManager.Mobile.csproj|c:\\users\\andre\\downloads\\desafio-vsoft\\desafio-vsoft\\devicemanager.mobile\\realmdb\\realmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC4A46BC-2D52-4A33-B567-5859345E8950}|DeviceManager.Mobile\\DeviceManager.Mobile.csproj|solutionrelative:devicemanager.mobile\\realmdb\\realmdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC4A46BC-2D52-4A33-B567-5859345E8950}|DeviceManager.Mobile\\DeviceManager.Mobile.csproj|c:\\users\\andre\\downloads\\desafio-vsoft\\desafio-vsoft\\devicemanager.mobile\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC4A46BC-2D52-4A33-B567-5859345E8950}|DeviceManager.Mobile\\DeviceManager.Mobile.csproj|solutionrelative:devicemanager.mobile\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2346D5-7288-4891-9ADB-7036560BE04D}|DeviceManager.Web\\DeviceManager.Web.csproj|c:\\users\\andre\\downloads\\desafio-vsoft\\desafio-vsoft\\devicemanager.web\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B2346D5-7288-4891-9ADB-7036560BE04D}|DeviceManager.Web\\DeviceManager.Web.csproj|solutionrelative:devicemanager.web\\services\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2346D5-7288-4891-9ADB-7036560BE04D}|DeviceManager.Web\\DeviceManager.Web.csproj|c:\\users\\andre\\downloads\\desafio-vsoft\\desafio-vsoft\\devicemanager.web\\pages\\dispositivos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B2346D5-7288-4891-9ADB-7036560BE04D}|DeviceManager.Web\\DeviceManager.Web.csproj|solutionrelative:devicemanager.web\\pages\\dispositivos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98289DCD-1C36-4D82-942E-C716D28B5F52}|DeviceManager.API\\DeviceManager.API.csproj|c:\\users\\andre\\downloads\\desafio-vsoft\\desafio-vsoft\\devicemanager.api\\controller\\dispositivoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{98289DCD-1C36-4D82-942E-C716D28B5F52}|DeviceManager.API\\DeviceManager.API.csproj|solutionrelative:devicemanager.api\\controller\\dispositivoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RealmDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Mobile\\RealmDb\\RealmDbContext.cs",
+              "RelativeDocumentMoniker": "DeviceManager.Mobile\\RealmDb\\RealmDbContext.cs",
+              "ToolTip": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Mobile\\RealmDb\\RealmDbContext.cs",
+              "RelativeToolTip": "DeviceManager.Mobile\\RealmDb\\RealmDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T11:57:08.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Mobile\\Services\\DeviceService.cs",
+              "RelativeDocumentMoniker": "DeviceManager.Mobile\\Services\\DeviceService.cs",
+              "ToolTip": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Mobile\\Services\\DeviceService.cs",
+              "RelativeToolTip": "DeviceManager.Mobile\\Services\\DeviceService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T11:49:43.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Web\\Services\\DeviceService.cs",
+              "RelativeDocumentMoniker": "DeviceManager.Web\\Services\\DeviceService.cs",
+              "ToolTip": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Web\\Services\\DeviceService.cs",
+              "RelativeToolTip": "DeviceManager.Web\\Services\\DeviceService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T11:48:56.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dispositivos.razor",
+              "DocumentMoniker": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Web\\Pages\\Dispositivos.razor",
+              "RelativeDocumentMoniker": "DeviceManager.Web\\Pages\\Dispositivos.razor",
+              "ToolTip": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.Web\\Pages\\Dispositivos.razor",
+              "RelativeToolTip": "DeviceManager.Web\\Pages\\Dispositivos.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T11:48:47.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DispositivosController.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.API\\Controller\\DispositivosController.cs",
+              "RelativeDocumentMoniker": "DeviceManager.API\\Controller\\DispositivosController.cs",
+              "ToolTip": "C:\\Users\\andre\\Downloads\\Desafio-vSoft\\Desafio-vSoft\\DeviceManager.API\\Controller\\DispositivosController.cs",
+              "RelativeToolTip": "DeviceManager.API\\Controller\\DispositivosController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T11:48:34.095Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

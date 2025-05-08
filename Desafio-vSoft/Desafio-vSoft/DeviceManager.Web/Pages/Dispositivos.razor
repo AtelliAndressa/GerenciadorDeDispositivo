@@ -1,0 +1,169 @@
+@page "/dispositivos"
+@using DeviceManager.Web.Models
+@using DeviceManager.Web.Services
+@inject IDeviceService DeviceService
+@inject ILogger<Dispositivos> Logger
+
+<PageTitle>Gerenciamento de Dispositivos</PageTitle>
+
+<div class="container">
+    <h1>Gerenciamento de Dispositivos</h1>
+
+    <div class="mb-3">
+        <button class="btn btn-primary" @onclick="() => ShowModal(null)">Novo Dispositivo</button>
+    </div>
+
+    @if (dispositivos == null)
+    {
+        <p>Carregando...</p>
+    }
+    else if (!dispositivos.Any())
+    {
+        <p>Nenhum dispositivo encontrado.</p>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Código de Referência</th>
+                        <th>Data de Criação</th>
+                        <th>Última Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dispositivo in dispositivos)
+                    {
+                        <tr>
+                            <td>@dispositivo.Descricao</td>
+                            <td>@dispositivo.CodigoReferencia</td>
+                            <td>@dispositivo.DataCriacao.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>@(dispositivo.DataAtualizacao?.ToString("dd/MM/yyyy HH:mm") ?? "-")</td>
+                            <td>
+                                <button class="btn btn-sm btn-warning me-2" @onclick="() => ShowModal(dispositivo)">Editar</button>
+                                <button class="btn btn-sm btn-danger" @onclick="() => DeleteDispositivo(dispositivo)">Excluir</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@if (showModal)
+{
+    <div class="modal fade show" style="display: block;" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@(dispositivoAtual?.Id == null ? "Novo Dispositivo" : "Editar Dispositivo")</h5>
+                    <button type="button" class="btn-close" @onclick="CloseModal"></button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="@dispositivoAtual" OnValidSubmit="SaveDispositivo">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="mb-3">
+                            <label class="form-label">Descrição</label>
+                            <InputText @bind-Value="dispositivoAtual.Descricao" class="form-control" />
+                            <ValidationMessage For="@(() => dispositivoAtual.Descricao)" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Código de Referência</label>
+                            <InputText @bind-Value="dispositivoAtual.CodigoReferencia" class="form-control" />
+                            <ValidationMessage For="@(() => dispositivoAtual.CodigoReferencia)" />
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @onclick="CloseModal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+}
+
+@code {
+    private List<Dispositivo> dispositivos;
+    private Dispositivo dispositivoAtual;
+    private bool showModal;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadDispositivos();
+    }
+
+    private async Task LoadDispositivos()
+    {
+        try
+        {
+            dispositivos = await DeviceService.GetAllAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Erro ao carregar dispositivos");
+        }
+    }
+
+    private void ShowModal(Dispositivo dispositivo)
+    {
+        dispositivoAtual = dispositivo ?? new Dispositivo();
+        showModal = true;
+    }
+
+    private void CloseModal()
+    {
+        showModal = false;
+        dispositivoAtual = null;
+    }
+
+    private async Task SaveDispositivo()
+    {
+        try
+        {
+            bool success;
+            if (string.IsNullOrEmpty(dispositivoAtual.Id))
+            {
+                success = await DeviceService.CreateAsync(dispositivoAtual);
+            }
+            else
+            {
+                success = await DeviceService.UpdateAsync(dispositivoAtual);
+            }
+
+            if (success)
+            {
+                await LoadDispositivos();
+                CloseModal();
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Erro ao salvar dispositivo");
+        }
+    }
+
+    private async Task DeleteDispositivo(Dispositivo dispositivo)
+    {
+        try
+        {
+            if (await DeviceService.DeleteAsync(dispositivo.Id))
+            {
+                await LoadDispositivos();
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Erro ao excluir dispositivo");
+        }
+    }
+} 

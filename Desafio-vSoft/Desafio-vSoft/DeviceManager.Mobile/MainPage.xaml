@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DeviceManager.Mobile.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:DeviceManager.Mobile.ViewModels"
+    x:Name="MainPageRef"
+    Padding="20">
+
+    <!-- Remova ou comente esta parte -->
+    <!--
+    <ContentPage.BindingContext>
+        <vm:DispositivoViewModel />
+    </ContentPage.BindingContext>
+    -->
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20">
+
+            <Entry Placeholder="Descrição" Text="{Binding Descricao}" />
+            <Entry Placeholder="Código Referência" Text="{Binding CodigoReferencia}" />
+
+            <HorizontalStackLayout Spacing="10">
+                <Button Command="{Binding AddCommand}" Text="Adicionar" />
+                <Button Command="{Binding SyncCommand}" Text="Sincronizar" />
+            </HorizontalStackLayout>
+
+            <Label FontAttributes="Bold" Text="Dispositivos:" />
+            <CollectionView ItemsSource="{Binding Dispositivos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="10" BackgroundColor="#f0f0f0" CornerRadius="5">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Descricao}" FontSize="16" />
+                                <Label Text="{Binding CodigoReferencia}" FontSize="14" />
+                                <HorizontalStackLayout Spacing="10" HorizontalOptions="End">
+                                    <Button
+                                        Text="Editar"
+                                        BackgroundColor="#FFC107"
+                                        TextColor="Black"
+                                        Command="{Binding BindingContext.ShowEditPanelCommand, Source={x:Reference MainPageRef}}"
+                                        CommandParameter="{Binding}" />
+
+                                    <Button
+                                        Text="Excluir"
+                                        BackgroundColor="#DC3545"
+                                        TextColor="White"
+                                        Command="{Binding BindingContext.DeleteCommand, Source={x:Reference MainPageRef}}"
+                                        CommandParameter="{Binding}" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <StackLayout
+                IsVisible="{Binding IsEditing}"
+                BackgroundColor="#EDEDED"
+                Padding="15"
+                Spacing="10"
+                Margin="0,20,0,0">
+
+                <Label Text="Editar Dispositivo" FontAttributes="Bold" FontSize="18" />
+
+                <Entry Placeholder="Descrição" Text="{Binding EditDescricao}" />
+                <Entry Placeholder="Código Referência" Text="{Binding EditCodigoReferencia}" />
+
+                <HorizontalStackLayout Spacing="10" HorizontalOptions="End">
+                    <Button
+                        Text="Cancelar"
+                        BackgroundColor="#999"
+                        TextColor="White"
+                        Command="{Binding CancelUpdateCommand}" />
+
+                    <Button
+                        Text="Salvar"
+                        BackgroundColor="#28A745"
+                        TextColor="White"
+                        Command="{Binding UpdateCommand}" />
+                </HorizontalStackLayout>
+            </StackLayout>
+
+            <!-- Logs -->
+            <Label FontAttributes="Bold" Text="Logs:" />
+            <CollectionView ItemsSource="{Binding Logs}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}" FontSize="12" />
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

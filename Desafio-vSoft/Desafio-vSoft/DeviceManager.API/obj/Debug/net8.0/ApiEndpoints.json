@@ -1,0 +1,97 @@
+[
+  {
+    "ContainingType": "DeviceManager.API.Controllers.DispositivosController",
+    "Method": "Get",
+    "RelativePath": "api/Dispositivos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DeviceManager.API.Controllers.DispositivosController",
+    "Method": "Create",
+    "RelativePath": "api/Dispositivos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "d",
+        "Type": "DeviceManager.API.Models.Dispositivo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DeviceManager.API.Controllers.DispositivosController",
+    "Method": "GetById",
+    "RelativePath": "api/Dispositivos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DeviceManager.API.Controllers.DispositivosController",
+    "Method": "Update",
+    "RelativePath": "api/Dispositivos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "d",
+        "Type": "DeviceManager.API.Models.Dispositivo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DeviceManager.API.Controllers.DispositivosController",
+    "Method": "Delete",
+    "RelativePath": "api/Dispositivos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DeviceManager.API.Controllers.DispositivosController",
+    "Method": "CreateMany",
+    "RelativePath": "api/Dispositivos/lote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dispositivos",
+        "Type": "System.Collections.Generic.List\u00601[[DeviceManager.API.Models.Dispositivo, DeviceManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
